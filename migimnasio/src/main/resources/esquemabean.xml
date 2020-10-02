@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+
+<bean id="lasprovincias" class="com.pedromanuelcubo.migimnasio.modelos.ProvinciaListado">
+     <property name="provincias">
+     <list>
+     <value>Alava</value>
+     <value>Albacete</value>
+     <value>Alicante</value>
+     <value>Almería</value>
+     <value>Asturias</value>
+     <value>Avila</value>
+     <value>Badajoz</value>
+     <value>Barcelona</value>
+     <value>Burgos</value>
+     <value>Cáceres</value>
+	<value>Cádiz</value>
+	<value>Cantabria</value>
+	<value>Castellón</value>
+	<value>CiudadReal</value>
+	<value>Córdoba</value>
+	<value>LaCoruña</value>
+	<value>Cuenca</value>
+	<value>Gerona</value>
+	<value>Granada</value>
+	<value>Guadalajara</value>
+<value>Guipúzcoa</value>
+<value>Huelva</value>
+<value>Huesca</value>
+<value>IslasBaleares</value>
+<value>Jaén</value>
+<value>León</value>
+<value>Lérida</value>
+<value>Lugo</value>
+<value>Madrid</value>
+<value>Málaga</value>
+<value>Murcia</value>
+<value>Navarra</value>
+<value>Orense</value>
+<value>Palencia</value>
+<value>LasPalmas</value>
+<value>Pontevedra</value>
+<value>LaRioja</value>
+<value>Salamanca</value>
+<value>Segovia</value>
+<value>Sevilla</value>
+<value>Soria</value>
+<value>Tarragona</value>
+<value>SantaCruzdeTenerife</value>
+<value>Teruel</value>
+<value>Toledo</value>
+<value>Valencia</value>
+<value>Valladolid</value>
+<value>Vizcaya</value>
+<value>Zamora</value>
+<value>Zaragoza</value>
+
+</list>
+   </property>
+</bean>
+
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd" />
+	</bean>
+
+
+	<bean id="dateFormatActividad" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd HH:mm" />
+	</bean>
+
+
+	<!-- bean definitions here -->
+	<bean id="login1" name="login1"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="albertorojas@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="USUARIO"></property>
+		
+	</bean>
+	
+	
+		<bean id="login2" name="login2"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="martaarias@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="USUARIO"></property>
+			
+	</bean>
+	
+			<bean id="login3" name="login3"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="luciajimenez@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="USUARIO"></property>
+			
+	</bean>
+	
+	
+			<bean id="login4" name="login4"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="arturoperez@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="USUARIO"></property>
+				
+	</bean>
+	
+	
+			<bean id="login5" name="login5"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="victoriarobles@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="USUARIO"></property>
+		
+	</bean>
+	
+	
+	
+				<bean id="login6" name="login6"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="robertomonge@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="ENTRENADOR"></property>
+	
+	</bean>
+	
+	
+					<bean id="login7" name="login7"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="alvarosanchez@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="ENTRENADOR"></property>
+	</bean>
+	
+	
+					<bean id="login8" name="login8"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="anacosta@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="ENTRENADOR"></property>
+	</bean>
+	
+	
+					<bean id="login9" name="login9"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="luispinzano@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="ENTRENADOR"></property>
+	</bean>
+	
+	
+	
+					<bean id="login10" name="login10"
+		class="com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin">
+		
+		<property name="email" value="pedro@gym.com"></property>
+		<property name="password" value="1234"></property>
+		<property name="role" value="ADMIN"></property>
+	</bean>
+	
+	
+	<bean id="provincia1" name="provincia1"
+		class="com.pedromanuelcubo.migimnasio.modelos.Provincia">
+		<property name="id" value="2"></property>
+		<property name="nombre" value="Albacete"></property>
+	</bean>
+	
+	
+		<bean id="provincia2" name="provincia2"
+		class="com.pedromanuelcubo.migimnasio.modelos.Provincia">
+		<property name="id" value="5"></property>
+		<property name="nombre" value="Asturias"></property>
+	</bean>
+	
+		<bean id="provincia3" name="provincia3"
+		class="com.pedromanuelcubo.migimnasio.modelos.Provincia">
+		<property name="id" value="3"></property>
+		<property name="nombre" value="Alicante"></property>
+	</bean>
+	
+		<bean id="provincia4" name="provincia4"
+		class="com.pedromanuelcubo.migimnasio.modelos.Provincia">
+		<property name="id" value="4"></property>
+		<property name="nombre" value="Almeria"></property>
+	</bean>
+	
+
+	<bean id="sede1" name="sede1"
+		class="com.pedromanuelcubo.migimnasio.modelos.Sede">
+		<property name="id" value="200"></property>
+		<property name="nombre" value="Gimnasio Rocio"></property>
+		<property name="direccion" value="calle almansa"></property>
+		<property name="provincia" ref="provincia1" />
+	</bean>
+
+	<bean id="sede2" name="sede2"
+		class="com.pedromanuelcubo.migimnasio.modelos.Sede">
+		<property name="id" value="201"></property>
+		<property name="nombre" value="Gimnasio Roberto"></property>
+		<property name="direccion" value="calle Molino"></property>
+			<property name="provincia" ref="provincia2" />
+	</bean>
+
+	<bean id="sede3" name="sede3"
+		class="com.pedromanuelcubo.migimnasio.modelos.Sede">
+		<property name="id" value="202"></property>
+		<property name="nombre" value="Gimnasio Alfredo"></property>
+		<property name="direccion" value="calle alonso"></property>
+			<property name="provincia" ref="provincia3" />
+	</bean>
+
+	<bean id="sede4" name="sede4"
+		class="com.pedromanuelcubo.migimnasio.modelos.Sede">
+		<property name="id" value="203"></property>
+		<property name="nombre" value="Gimnasio Marcos"></property>
+		<property name="direccion" value="calle valverde"></property>
+			<property name="provincia" ref="provincia4" />
+	</bean>
+
+
+
+
+
+
+	<bean id="usuario1"  name="usuario1"
+		class="com.pedromanuelcubo.migimnasio.modelos.Usuario">
+		<property name="id" value="100"></property>
+		<property name="nombre" value="Alberto Rojas"></property>
+		<property name="domicilio" value="calle abedul"></property>
+		<property name="fechanacimiento">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2010-01-31"></constructor-arg>
+			</bean>
+
+
+		</property>
+		<property name="telefono" value="6668888"></property>
+
+		<property name="dni" value="888888"></property>
+		<property name="sede" ref="sede1" />
+			<property name="provincia" ref="provincia1" />
+			<property name="usuariologin" ref="login1" />
+	</bean>
+
+	<bean id="usuario2" name="usuario2"
+		class="com.pedromanuelcubo.migimnasio.modelos.Usuario">
+		<property name="id" value="101"></property>
+		<property name="nombre" value="Marta Arias"></property>
+		<property name="domicilio" value="calle Rioja"></property>
+		<property name="fechanacimiento">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2010-01-31"></constructor-arg>
+			</bean>
+		</property>
+		<property name="telefono" value="6668338"></property>
+		<property name="dni" value="8888828"></property>
+		<property name="sede" ref="sede2" />
+			<property name="provincia" ref="provincia2" />
+				<property name="usuariologin" ref="login2" />
+	</bean>
+
+	<bean id="usuario3" name="usuario3"
+		class="com.pedromanuelcubo.migimnasio.modelos.Usuario">
+		<property name="id" value="102"></property>
+		<property name="nombre" value="Lucia Jimenez"></property>
+		<property name="domicilio" value="calle Aragon"></property>
+		<property name="fechanacimiento">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2010-01-31"></constructor-arg>
+			</bean>
+
+
+		</property>
+		<property name="telefono" value="666788"></property>
+		<property name="dni" value="888838"></property>
+		<property name="sede" ref="sede3" />
+			<property name="provincia" ref="provincia3" />
+				<property name="usuariologin" ref="login3" />
+	</bean>
+
+	<bean id="usuario4" name="usuario4"
+		class="com.pedromanuelcubo.migimnasio.modelos.Usuario">
+		<property name="id" value="103"></property>
+		<property name="nombre" value="Arturo Perez"></property>
+		<property name="domicilio" value="calle solana"></property>
+		<property name="fechanacimiento">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2010-01-31"></constructor-arg>
+			</bean>
+
+		</property>
+		<property name="telefono" value="6667788"></property>
+		<property name="dni" value="888882228"></property>
+		<property name="sede" ref="sede4" />
+			<property name="provincia" ref="provincia4" />
+				<property name="usuariologin" ref="login4" />
+	</bean>
+
+	<bean id="usuario5" name="usuario5"
+		class="com.pedromanuelcubo.migimnasio.modelos.Usuario">
+		<property name="id" value="104"></property>
+		<property name="nombre" value="Victoria Robles"></property>
+		<property name="domicilio" value="calle olivar"></property>
+		<property name="fechanacimiento">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="2010-01-31"></constructor-arg>
+			</bean>
+
+		</property>
+		<property name="telefono" value="6668888"></property>
+		<property name="dni" value="P00882221"></property>
+		<property name="sede" ref="sede1" />
+			<property name="provincia" ref="provincia1" />
+			<property name="usuariologin" ref="login5" />
+	</bean>
+
+
+
+
+
+
+
+
+
+
+	<bean id="entrenador1" name="entrenador1"
+		class="com.pedromanuelcubo.migimnasio.modelos.Entrenador">
+		<property name="id" value="301"></property>
+		<property name="nombre" value="Roberto Monje"></property>
+	<property name="descripcion" value="Entrenador especializado en musculación y trabajo físico"></property>
+		<property name="telefono" value="6668888"></property>
+		<property name="dni" value="A2288888R"></property>
+		<property name="sede" ref="sede1" />
+	
+				<property name="usuariologin" ref="login6" />
+	</bean>
+
+
+
+	<bean id="entrenador2" name="entrenador2"
+		class="com.pedromanuelcubo.migimnasio.modelos.Entrenador">
+		<property name="id" value="302"></property>
+		<property name="nombre" value="Alvaro Sanchez"></property>
+		<property name="descripcion" value="Entrenador especializado en ejercicios aeróbicos"></property>
+	
+		<property name="telefono" value="6668888"></property>
+		<property name="dni" value="44888888C"></property>
+		<property name="sede" ref="sede2" />
+		
+				<property name="usuariologin" ref="login7" />
+	</bean>
+
+
+
+	<bean id="entrenador3"  name="entrenador3"
+		class="com.pedromanuelcubo.migimnasio.modelos.Entrenador">
+		<property name="id" value="303"></property>
+		<property name="nombre" value="Ana Costa"></property>
+			<property name="descripcion" value="Entrenador especializado yoga, relajación y mente"></property>
+
+		<property name="telefono" value="6668888"></property>
+		<property name="dni" value="B8222188888"></property>
+		<property name="sede" ref="sede3" />
+
+				<property name="usuariologin" ref="login8" />
+	</bean>
+
+
+
+	<bean id="entrenador4"  name="entrenador4"
+		class="com.pedromanuelcubo.migimnasio.modelos.Entrenador">
+		<property name="id" value="304"></property>
+		<property name="nombre" value="Luis Pinzano"></property>
+		<property name="descripcion" value="Entrenador especializado musculación, boxeo y defensa personal"></property>
+		<property name="telefono" value="6668888"></property>
+		<property name="dni" value="A8819998888"></property>
+		<property name="sede" ref="sede4" />
+		
+				<property name="usuariologin" ref="login9" />
+	</bean>
+
+
+
+	<bean id="actividad1"
+		class="com.pedromanuelcubo.migimnasio.modelos.Actividad">
+		<property name="id" value="501"></property>
+		<property name="nombre" value="Yoga"></property>
+		<property name="plazas" value="50"></property>
+		<property name="dia">
+			<bean factory-bean="dateFormatActividad" factory-method="parse">
+				<constructor-arg value="2021-05-05 18:00"></constructor-arg>
+			</bean>
+		</property>
+	
+		<property name="sede" ref="sede4" />
+		<property name="entrenador" ref="entrenador4" />
+	</bean>
+
+
+	<bean id="actividad2"
+		class="com.pedromanuelcubo.migimnasio.modelos.Actividad">
+		<property name="id" value="502"></property>
+		<property name="nombre" value="Zumba"></property>
+		<property name="plazas" value="50"></property>
+		<property name="dia">
+			<bean factory-bean="dateFormatActividad" factory-method="parse">
+				<constructor-arg value="2021-05-05 18:00"></constructor-arg>
+			</bean>
+		</property>
+	
+		<property name="sede" ref="sede3" />
+		<property name="entrenador" ref="entrenador4" />
+	</bean>
+
+
+
+	<bean id="actividad3"
+		class="com.pedromanuelcubo.migimnasio.modelos.Actividad">
+		<property name="id" value="503"></property>
+		<property name="nombre" value="Karate"></property>
+		<property name="plazas" value="50"></property>
+		<property name="dia">
+			<bean factory-bean="dateFormatActividad" factory-method="parse">
+				<constructor-arg value="2021-05-05 19:00"></constructor-arg>
+			</bean>
+		</property>
+	
+		<property name="sede" ref="sede2" />
+		<property name="entrenador" ref="entrenador2" />
+	</bean>
+
+
+
+	<bean id="actividad4"
+		class="com.pedromanuelcubo.migimnasio.modelos.Actividad">
+		<property name="id" value="504"></property>
+		<property name="nombre" value="Boxeo"></property>
+		<property name="plazas" value="250"></property>
+		<property name="dia">
+			<bean factory-bean="dateFormatActividad" factory-method="parse">
+				<constructor-arg value="2021-05-05 20:00"></constructor-arg>
+			</bean>
+		</property>
+	
+		<property name="sede" ref="sede2" />
+		<property name="entrenador" ref="entrenador2" />
+	</bean>
+
+
+
+
+</beans>
