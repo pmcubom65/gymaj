@@ -32,7 +32,8 @@ public class SedeController {
 	@Autowired
 	private ProvinciaService provinciaservice;
 	
-
+	@Autowired
+	private UsuarioService usuarioservice;
 
 	@RequestMapping(value="/sedes")
 	public List<Sede> getAllSedes() {
@@ -67,10 +68,12 @@ public class SedeController {
 	@RequestMapping(value="/sedes/{id}", method=RequestMethod.DELETE)
 	public void deleteSede(@PathVariable Long id) {
 		
-		
-		
-		
+	//	usuarioservice.deleteUsuariosDeUnaSede(id);
+		sedeservice.iniciarBorrado();
+				
 		sedeservice.deleteSede(id);
+		
+		sedeservice.acabarBorrado();
 	}
 	
 	

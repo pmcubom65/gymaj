@@ -59,6 +59,12 @@ public class SedeService {
 		sederepository.setSedeId(idinicial, idfinal);
 	}
 	
+	public void iniciarBorrado() {
+		sederepository.iniciarBorrado();
+	}
 	
+	public void acabarBorrado() {
+		sederepository.acabarBorrado();
+	}
 	
 }

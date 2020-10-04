@@ -68,6 +68,15 @@ public class UsuarioService {
 	public void deleteUsuario(Long id) {
 		usuariorepositorio.deleteById(id);
 	}
+	
+	
+	public void deleteUsuariosDeUnaSede(Long id) {
+		System.out.println(usuariorepositorio.usuariosDeLaSede(id));
+		usuariorepositorio.usuariosDeLaSede(id).forEach(usuario->{
+			System.out.println(usuario);
+			this.deleteUsuario(new Long(usuario));
+		});
+	}
 
 	
 	@Transactional

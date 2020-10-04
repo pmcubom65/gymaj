@@ -1,5 +1,7 @@
 package com.pedromanuelcubo.migimnasio.repositorios;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -18,5 +20,6 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
 	@Query(value="SELECT id from usuario where usuariologin_id=?1", nativeQuery = true)
 	Integer usuarioEntorno(Long usuariologin_id);
 	
-	
+	@Query(value="SELECT id from usuario where sede_id=?1", nativeQuery = true)
+	List<Integer> usuariosDeLaSede(Long usuariologin_id);
 }

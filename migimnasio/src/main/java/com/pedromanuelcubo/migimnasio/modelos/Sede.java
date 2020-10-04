@@ -3,13 +3,20 @@ package com.pedromanuelcubo.migimnasio.modelos;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Transient;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.annotations.Where;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -26,12 +33,15 @@ public class Sede extends Auditable<String> {
 
 	@Transient
 	@OneToMany(mappedBy = "sede")
+	@Where(clause = "deleted=false")
 	private List<Usuario> usuarios;
 
 	@OneToMany(mappedBy = "sede")
+	@Where(clause = "deleted=false")
 	private List<Entrenador> entrenadores;
 
 	@OneToMany(mappedBy = "sede")
+	@Where(clause = "deleted=false")
 	private List<Actividad> actividades;
 
 	@OneToOne(cascade = CascadeType.MERGE)
