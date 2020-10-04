@@ -1,5 +1,6 @@
 package com.pedromanuelcubo.migimnasio.controlador;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pedromanuelcubo.migimnasio.modelos.Actividad;
 import com.pedromanuelcubo.migimnasio.modelos.Entrenador;
 import com.pedromanuelcubo.migimnasio.modelos.Sede;
 import com.pedromanuelcubo.migimnasio.modelos.UsuarioLogin;
@@ -70,6 +72,20 @@ public class EntrenadorController {
 
 		return retorno;
 	}
+	
+	
+	
+	@RequestMapping(value="/entrenadores/{id}/actividades")
+	public List<Actividad> getActividadesDelEntrenadorById(@PathVariable Long id) {
+	
+		List<Actividad> listadoactividades=entrenadorservice.getEntrenador(id).get().getListadoactividades();
+		Collections.sort(listadoactividades, (a,b)-> 
+		Long.compare(-a.getDia().getTime(), b.getDia().getTime()));
+		
+		return listadoactividades;
+	}
+	
+	
 	
 	@RequestMapping(value="/entrenadores", method=RequestMethod.POST)
 	public Entrenador addEntrenador(@RequestBody Entrenador e) {

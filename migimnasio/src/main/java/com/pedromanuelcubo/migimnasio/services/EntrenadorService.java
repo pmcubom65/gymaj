@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import com.pedromanuelcubo.migimnasio.modelos.Actividad;
 import com.pedromanuelcubo.migimnasio.modelos.Entrenador;
 import com.pedromanuelcubo.migimnasio.modelos.Sede;
 import com.pedromanuelcubo.migimnasio.repositorios.EntrenadorRepository;
@@ -50,6 +51,8 @@ public class EntrenadorService {
 		return entrenadorrepository.findById(id);
 
 	}
+	
+
 	
 
 	public Sede getSededelEntrenador(Long id) {
