@@ -33,15 +33,12 @@ public class Sede extends Auditable<String> {
 
 	@Transient
 	@OneToMany(mappedBy = "sede")
-	@Where(clause = "deleted=false")
 	private List<Usuario> usuarios;
 
 	@OneToMany(mappedBy = "sede")
-	@Where(clause = "deleted=false")
 	private List<Entrenador> entrenadores;
 
 	@OneToMany(mappedBy = "sede")
-	@Where(clause = "deleted=false")
 	private List<Actividad> actividades;
 
 	@OneToOne(cascade = CascadeType.MERGE)

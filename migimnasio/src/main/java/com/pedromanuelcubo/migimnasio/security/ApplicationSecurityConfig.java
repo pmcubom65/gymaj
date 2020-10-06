@@ -40,6 +40,18 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	@Override
+	public void configure(WebSecurity web) throws Exception {
+
+		web.ignoring().antMatchers(HttpMethod.GET, "/sedes/**");
+		web.ignoring().antMatchers(HttpMethod.GET,  "/entrenadores");
+
+		web.ignoring().antMatchers("/provincias");
+		web.ignoring().antMatchers(HttpMethod.PUT, "/validarlogin");
+		web.ignoring().antMatchers("/login");
+	
+	}
+	
+	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 	
 		
@@ -47,9 +59,9 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 		.cors().and()
 		.csrf().disable()
 		.authorizeRequests()
-		.antMatchers(HttpMethod.POST, "/sedes/*").hasRole(ApplicationRoles.ADMIN.name())
-		.antMatchers(HttpMethod.PUT, "/sedes/*").hasRole(ApplicationRoles.ADMIN.name())
-		.antMatchers(HttpMethod.DELETE, "/sedes/*").hasRole(ApplicationRoles.ADMIN.name())
+		.antMatchers(HttpMethod.POST, "/sedes").hasRole(ApplicationRoles.ADMIN.name())
+		.antMatchers(HttpMethod.PUT, "/sedes/**").hasRole(ApplicationRoles.ADMIN.name())
+		.antMatchers(HttpMethod.DELETE, "/sedes/**").hasRole(ApplicationRoles.ADMIN.name())
 		.antMatchers(HttpMethod.GET,"/usuarios/*").hasAnyRole(ApplicationRoles.ADMIN.name(), ApplicationRoles.USUARIO.name())
 		.antMatchers(HttpMethod.GET,"/usuarios").hasAnyRole(ApplicationRoles.ADMIN.name(), ApplicationRoles.USUARIO.name())
 		.antMatchers(HttpMethod.PUT,"/usuarios/*").hasAnyRole(ApplicationRoles.ADMIN.name(), ApplicationRoles.USUARIO.name())
@@ -65,13 +77,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring()
-		.antMatchers(HttpMethod.GET, "/sedes/*", "/sedes", "/provincias",   "/entrenadores")
-		.antMatchers(HttpMethod.PUT, "/validarlogin")
-		.antMatchers("/login");
-	}
+
 	
 	@Bean
 	protected CorsConfigurationSource corsConfigurationSource() {
