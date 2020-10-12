@@ -4,6 +4,7 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -42,7 +43,14 @@ public class LoginController {
 	@PutMapping
 	public UsuarioLogin crearUsuario(@RequestBody UsuarioLogin usuario) {
 
+		try {
 			return usuariologinservice.saveUsuario(usuario.getEmail(), usuario.getPassword(), usuario.getRole().toString());
+			
+		}	catch (DataIntegrityViolationException e) {
+			
+			return null;
+		}
+			
 	}
 	
 	

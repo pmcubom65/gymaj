@@ -62,6 +62,7 @@ public class UsuarioController {
 		retorno.put("sede", usuario.getSede().getNombre());
 		retorno.put("sedeid", usuario.getSede().getId().toString());
 		retorno.put("usuariologin_id", usuario.getUsuariologin().getId().toString());
+		retorno.put("password", usuario.getUsuariologin().getPassword().toString());
 
 		return retorno;
 

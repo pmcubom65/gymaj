@@ -1,5 +1,6 @@
 package com.pedromanuelcubo.migimnasio.services;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +43,8 @@ public class UsuarioService {
 		
 		try {
 			return usuariorepositorio.save(usuario);
-		}catch (DataIntegrityViolationException e) {
+		}
+		catch (DataIntegrityViolationException e) {
 			
 			return null;
 		}
